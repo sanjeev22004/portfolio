@@ -11,15 +11,10 @@ body{
 }
 
 #header{
-    background-image: url(background.jpg);
-    background-position: center;
+    background-image: linear-gradient(rgba(7, 7, 7, 0.7), rgba(69, 151, 228, 0.681)),url(backgroundp.png);
     background-size: cover;
-
     width:100%;
     height:100vh;
-    
-   
-    
 }
 .container{
     padding :10px 20px;
@@ -28,12 +23,17 @@ body{
 
 nav ul li{
     display: inline-block;
-    margin:10px 20px;
+    padding:10px 20px;
+    
+    background-color: #080808;
+    border-radius: 5px;
+    
    
 }
 
 nav ul li a{
- color: #fff;
+ color: #dbd6d6;
+ font-weight: 550;
  text-decoration: none;
  font-size:20px;
 position: relative;
@@ -64,7 +64,7 @@ nav ul li a::after{
    }
 
    .header-text h1 span{
-  color:red;
+  color:yellow;
    }
    /* ..................about........... */
 
@@ -80,35 +80,40 @@ nav ul li a::after{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding:5% 5%;
+    
    }
 
    .about-col-1{
-    flex-basis:15%;
+    flex-basis:35%;
    
    }
-
-   .about-col-1 img{
-    width:100%;
-    border-radius: 15px;
-   }
-
    .about-col-2{
     flex-basis:60%;
    }
-   .sub-tille{
+   .about-col-1 img{
+    width:100%;
+    border-radius: 5%;
+   }
+
+  
+   .sub-title{
     font-size:60px;
     font-weight: 600;
     color:#fff;
+    padding:20px 0px;
+    
    }
 
    .tab-titles{
     display:flex;
     margin: 20px;
+    
    }
    .tab-links{
     margin-right:50px;
-    font-size: 20px;
-    font-weight:500;
+    font-size: 30px;
+    font-weight:600;
     cursor: pointer;
     position:relative;
    }
@@ -130,6 +135,7 @@ nav ul li a::after{
    .tab-content ul li{
     list-style:none;
     margin:10px 0;
+    font-size: larger;
    }
    .tab-content{
     display:none;
@@ -138,17 +144,54 @@ nav ul li a::after{
     display:block;
    }
 
+.category {
+    font-weight: bold; 
+    color: #68a8f1c4; 
+    margin-right: 5px; 
+}
+
+.highlight {
+    color: #e7c86b; 
+    font-weight: bold; 
+}
+
+.institution {
+    font-weight: bold; /* Set your desired styles for the institution */
+    color:  #68a8f1c4;  
+}
+
+.course {
+    font-style: italic; /* Set your desired styles for the course */
+}
+
+.duration {
+    color: #888; /* Set your desired text color for duration */
+}
+
+.subject {
+    font-weight: bold; /* Set your desired styles for the subjects */
+    color:  #68a8f1c4;  /* Set your desired text color */
+}
+
+.bio{
+    font-size: large;
+    color:rgb(136, 179, 216)
+}
+
+
+
    /* .................projects................ */
 
    #projects{
-    padding: 50px 0px;
+     padding:5% 5%;;
    }
 
    .work-list{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    grid-gap:40px;
-    margin-top:50px
+    grid-gap:15%;
+    margin-top:50px;
+    
    }
 
     .work{
@@ -161,12 +204,13 @@ nav ul li a::after{
     width:100%;
     border-radius:10px;
     /* display:block; */
+    background-color: #8b8780;
    } 
 
    .layer{
     width:100%;
     height:0;
-    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    background:linear-gradient(rgba(104, 24, 25, 0.8),#0e0e0e);
     border-radius:10px;
     position:absolute;
     left:0;
@@ -184,16 +228,19 @@ nav ul li a::after{
    .layer h3{
     font: weight 500px;
     margin:  20px 0;
+    font-size: 200%;
    }
    .layer p{
     overflow: auto;
+    color:rgba(189, 243, 243, 0.884);
    }
 
    .layer a{
+    font-weight:8000px;
     margin:20px 0;
-    color:#ff004f;
+    color:#cd3434;
     text-decoration: none;
-    font-size:20px;
+    font-size:xx-large;
     line-height: 60px;
     background:#fff;
     width: 60px;
@@ -228,7 +275,7 @@ nav ul li a::after{
 .contact-left{
     flex-basis:35%;
 }
-.contact-rigth{
+.contact-right{
     flex-basis:60%;
 }
 .contact-left p{
@@ -236,21 +283,18 @@ nav ul li a::after{
     font-size:20px;
 }
 .social-icon a{
-    text-decoration: none;
-    font-size:30px;
     margin-right:20px;
-    color:#ababab;
-    display: inline-block;
     transition: transform 0.5s;
-
 }
 .social-icon a:hover{
-    color:#ff004f;
+    
     transform: translateY(-5px);
 }
 .btn.btn2{
+    
     display: inline-block;
     background-color: #ff004f;
+    
 }
 .contact-right form{
     width:100%;
@@ -273,4 +317,15 @@ form .btn2{
     font-size:18px;
     margin-top:20px;
     cursor: pointer;
+    
+}
+.social-icon {
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    grid-gap:5px;
+}
+.social-icon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
 }
