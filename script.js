@@ -14,3 +14,22 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     });
 });
+
+
+
+//for see more
+document.addEventListener('DOMContentLoaded', () => {
+    const seeMoreButton = document.querySelector('.btn.show-more');
+    const moreProjects = document.querySelector('.more-projects');
+
+    seeMoreButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (moreProjects.style.display === 'none' || moreProjects.style.display === '') {
+            moreProjects.style.display = 'grid';
+            seeMoreButton.textContent = 'See Less';
+        } else {
+            moreProjects.style.display = 'none';
+            seeMoreButton.textContent = 'See More';
+        }
+    });
+});
